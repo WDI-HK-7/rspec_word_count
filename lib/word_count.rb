@@ -4,7 +4,7 @@ class String
   end
 
   def unique_word_count
-    extract_words(self).length
+    extract_words(self).uniq.count
   end
   
   def word_frequency_count
