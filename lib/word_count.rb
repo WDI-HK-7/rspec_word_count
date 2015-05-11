@@ -11,9 +11,9 @@ class String
   	end
 
   	counts
-  end  
+  end 
 
   def words_array(string)
-  	string.downcase.scan(/[\W']+/)
+  	string.downcase.scan(/[\w']+/)
   end
-end 
+end
