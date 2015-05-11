@@ -14,7 +14,7 @@ describe String, "#unique_word_count" do
     word_count.should == 1
   end
   it "should return '6' when the sentence is six words long" do
-    a_string = "It was the best of times"
+    a_string = "It was the best of times times"
     word_count = a_string.unique_word_count
     word_count.should == 6
   end
