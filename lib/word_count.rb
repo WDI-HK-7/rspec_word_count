@@ -1,15 +1,16 @@
 class String
  
-  def unique_word_count(user_phrase)
-  	user_phrase.split.uniq.size
+  def unique_word_count
+  	unique_word(self).uniq.size
+  end
+
+  def unique_word(phrase)
+  	phrase.downcase.scan(/[\w']+/)
   end
   
-  def word_frequency_count(user_phrase)
-  	array_of_words = user_phrase.split(' ')
+  def word_frequency_count
   	frequencies = Hash.new(0)
-  	array_of_words.each {|word| frequencies[word] +=1 }
+  	unique_word(self).each {|word| frequencies[word] +=1 }
   	return frequencies
   end  
 end
-
-# i dont understand why this gives me wrong number of arguments..... 
