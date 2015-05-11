@@ -1,12 +1,12 @@
 class String
   def unique_word_count
-    string_to_array = self.downcase.scan(/\w+/)  
+    string_to_array = self.downcase.scan(/[\w]+/)  
     string_to_array.uniq.count
     # puts string_to_array.uniq.count
   end
   
   def word_frequency_count
-    string_to_array = self.downcase.scan(/\w+/)  
+    string_to_array = self.downcase.scan(/[\w]+/)  
     frequencies = Hash.new(0)
 
     string_to_array.each  do |word|
